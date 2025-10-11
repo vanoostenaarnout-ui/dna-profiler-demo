@@ -1,0 +1,6 @@
+﻿customer_id,first_name,last_name,email,phone,country
+101,Ada,Lovelace,ada@example.com,+44 7000 000101,UK
+102,Alan,Turing,alan@example.org,+44 7000 000102,UK
+103,Grace,Hopper,grace@example.net,+1 212 000 0103,US
+104,Linus,Torvalds,linus@example.fi,+358 50 000 0104,FI
+105,Tim,Berners-Lee,tim@example.uk,+44 7000 000105,UK
