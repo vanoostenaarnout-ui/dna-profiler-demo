@@ -19,13 +19,13 @@ git clone https://github.com/your-org-or-user/dna-profiler-demo.git
 cd dna-profiler-demo
 ./demo_scripts/profile_sample.sh
 ```
-### Option B — Run via CLI
+### Option B — Run via Docker
 
 ```bash
 docker run --rm \
   -v "<your\path\to>\dna-profiler-demo\sample_data":/data \
   -v "<your\path\to>\dna-profiler-demo\output":/out \
-  your-public-image:demo profile /data/customers.csv --output /out/
+  ghcr.io/dnahub/dna-profiler:demo server 
 ```
 🧭 Runs locally. **No data ever leaves your machine.**
 For enterprise trials, contact info@dnahub.co.uk
