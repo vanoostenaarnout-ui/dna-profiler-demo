@@ -1,44 +1,55 @@
-﻿# DNA Profiler â€” Demo Repository
+# 🧬 DNA Profiler — Public Demo
 
-This is a public, runnable **demo** of DNA Profiler. It shows how we reveal the *terrain* of organisational data: completeness, quality signals, and duplicate clusters â€” in minutes.
+This is a **runnable public demo** of **DNA Profiler**, the lightweight engine for **profiling, validating, and matching organisational data** — built to reveal the *terrain* of your data in minutes.
 
-> This repo shares **examples, docs, and demo outputs**. It does **not** include the proprietary engine code.
+Understand your datasets at a glance:
+- 📊 **Completeness & quality signals**
+- 🧩 **Duplicate and fuzzy clusters**
+- 🔍 **Field-level patterns & MDM hints**
 
-## â±ï¸ Try it in 5 Minutes
+No installation, no cloud dependency — just clarity, fast.
 
-### Option A â€” Run the CLI demo
-\\\ash
+---
+
+## ⚡ Try it in 5 Minutes
+
+### Option A — Run via CLI
+```bash
 git clone https://github.com/your-org-or-user/dna-profiler-demo.git
 cd dna-profiler-demo
 ./demo_scripts/profile_sample.sh
-# Results saved under ./output/
-\\\
+```
+### Option B — Run via CLI
 
-Expected (abridged):
-\\\
-âœ” File: customers.csv
-âœ” Records: 10,000
-âœ” Completeness: 94.2 %
-âœ” Duplicate clusters: 27
-â†’ Open output/profile_dashboard.html
-\\\
-
-### Option B â€” Docker (no install)
-\\\ash
-docker run --rm -v "\C:\Users\aarno\Documents\erengine\dna-profiler-demo/sample_data":/data -v "\C:\Users\aarno\Documents\erengine\dna-profiler-demo/output":/out 
+```bash
+docker run --rm \
+  -v "<your\path\to>\dna-profiler-demo\sample_data":/data \
+  -v "<your\path\to>\dna-profiler-demo\output":/out \
   your-public-image:demo profile /data/customers.csv --output /out/
-\\\
+```
+🧭 Runs locally. **No data ever leaves your machine.**
+For enterprise trials, contact info@dnahub.co.uk
 
-> ðŸ•Š Runs locally. No data leaves your machine. For enterprise trials, contact **hello@dnahub.io**.
+## 📁 What’s Inside
 
-## Whatâ€™s inside
-- \demo_scripts/\ runnable examples (profile, validate, match)
-- \sample_data/\ synthetic CSVs
-- \docs/\ quickstart, architecture, transparency
-- \screenshots/\ UI and CLI snapshots
+| 📂 Folder | 📘 Description |
+|------------|----------------|
+| `demo_scripts/` | Runnable examples (`profile`, `validate`, `match`) |
+| `sample_data/`  | Synthetic datasets for testing |
+| `docs/`         | Quickstart, architecture, and transparency notes |
+| `screenshots/`  | CLI and UI snapshots |
 
-## Why a demo repo?
-**Transparency builds trust.** We show the workflow, inputs, and outputs so teams can evaluate fit quickly â€” while keeping sensitive IP secure.
 
-## License
-Docs, data, and scripts are **CC BY-NC 4.0** (non-commercial). See **LICENSE**.
+🌍 Why a Public Demo?
+
+Because transparency builds trust.
+We believe teams should be able to see the terrain before they decide to journey further.
+This repository shows the workflow, inputs, and outputs clearly — while keeping the proprietary engine secure.
+
+⚖️ License
+
+Docs, data, and scripts are licensed under CC BY-NC 4.0 (Non-Commercial).
+
+See [LICENSE](./LICENSE) for details.
+
+
