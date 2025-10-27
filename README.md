@@ -20,23 +20,16 @@ Run instantly without installing anything else.
 **macOS / Linux:**
 
 ```bash
-docker run --rm -p 8080:8080 \
-  -v "$(pwd)/sample_data:/data" \
-  -v "$(pwd)/output:/out" \
-  ghcr.io/dnahub/dna-profiler:demo \
-  server --host 0.0.0.0 --port 8080
+docker run --rm -p 8080:8080 -v "$(pwd)/sample_data:/data" -v "$(pwd)/output:/out" ghcr.io/vanoostenaarnout-ui/dna-profiler:latest server --host 0.0.0.0 --port 8080
 ```
 **Windows Powershell:**
 
 ```bash
-docker run --rm \
-  -v "<your\path\to>\dna-profiler-demo\sample_data":/data \
-  -v "<your\path\to>\dna-profiler-demo\output":/out \
-  ghcr.io/dnahub/dna-profiler:demo server 
+docker run --rm -p 8080:8080 ghcr.io/vanoostenaarnout-ui/dna-profiler:latest server --host 0.0.0.0 --port 8080
 ```
 **If port 8080 is busy, remap:**
 ```bash
-docker run --rm -p 8081:8080 ghcr.io/dnahub/dna-profiler:demo server --host 0.0.0.0 --port 8080
+docker run --rm -p 8081:8080 ghcr.io/vanoostenaarnout-ui/dna-profiler:latest --host 0.0.0.0 --port 8080
 ```
 
 🧭 Runs locally. **No data ever leaves your machine.**
