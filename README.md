@@ -13,13 +13,20 @@ No installation, no cloud dependency — just clarity, fast.
 
 ## ⚡ Try it in 5 Minutes
 
-### Option A — Run via CLI
+### 🐳 Option A — Run via Docker (recommended)
+
+Run instantly without installing anything else.
+
+**macOS / Linux:**
+
 ```bash
-git clone https://github.com/your-org-or-user/dna-profiler-demo.git
-cd dna-profiler-demo
-./demo_scripts/profile_sample.sh
+docker run --rm -p 8080:8080 \
+  -v "$(pwd)/sample_data:/data" \
+  -v "$(pwd)/output:/out" \
+  ghcr.io/dnahub/dna-profiler:demo \
+  server --host 0.0.0.0 --port 8080
 ```
-### Option B — Run via Docker
+**Windows Powershell:**
 
 ```bash
 docker run --rm \
@@ -27,8 +34,59 @@ docker run --rm \
   -v "<your\path\to>\dna-profiler-demo\output":/out \
   ghcr.io/dnahub/dna-profiler:demo server 
 ```
+**If port 8080 is busy, remap:**
+```bash
+docker run --rm -p 8081:8080 ghcr.io/dnahub/dna-profiler:demo server --host 0.0.0.0 --port 8080
+```
+
 🧭 Runs locally. **No data ever leaves your machine.**
 For enterprise trials, contact info@dnahub.co.uk
+
+### 💻 Option B — Download a Pre-built Executable
+
+Download from the [Releases page](https://github.com/dnahub/dna-profiler-demo/releases):
+
+| Platform | File |
+|-----------|------|
+| 🪟 Windows | `dnaprofiler_windows_amd64.zip` |
+| 🍎 macOS (Apple Silicon) | `dnaprofiler_darwin_arm64.zip` |
+| 🍎 macOS (Intel) | `dnaprofiler_darwin_amd64.zip` |
+| 🐧 Linux | `dnaprofiler_linux_amd64.zip` |
+
+Unzip the file.
+
+**Make executable (macOS / Linux):**
+
+```bash
+chmod +x ./dnaprofiler_*
+```
+
+Quick Check:
+```bash
+./dnaprofiler_* --version
+```
+MacOS Gatekeeper (If blocked):
+```bash
+xattr -d com.apple.quarantine ./dnaprofiler_darwin_arm64
+```
+
+# How To Use 
+
+Each binary can act as either server or client.
+
+**Server mode (REST API + UI):**
+
+```bash
+./dnaprofiler_* server --host 0.0.0.0 --port 8080
+```
+**Client mode (CLI command examples):**
+Open (http://localhost:8080)
+```bash
+./dnaprofiler_* profile  --input sample_data/customers.csv --out output/report.json
+./dnaprofiler_* validate --input sample_data/customers.csv
+./dnaprofiler_* match    --input sample_data/customers.csv
+```
+
 
 ## 📁 What’s Inside
 
