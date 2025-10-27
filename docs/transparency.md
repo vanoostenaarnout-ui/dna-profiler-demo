@@ -7,4 +7,4 @@ so you can evaluate fit quickly, while we keep sensitive IP secure.
 - Sample data here is fully synthetic.
 - Engine code and advanced models remain private.
 
-Questions? hello@dnahub.io
+Questions? info@dnahub.co.uk
